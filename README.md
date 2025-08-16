@@ -1,68 +1,84 @@
-# TaxiNeto360 · Documentación legal y descripción de la app
+# TaxiNeto360 · Documentos legales y descripción de la app
 
-**TaxiNeto360** es una aplicación para conductores y empresas de taxi que facilita el registro de jornadas y la liquidación real de cada turno. Permite llevar un control claro de entradas y salidas, horas y minutos trabajados, kilómetros recorridos, número de servicios, licencias asignadas, empresa, fotos de soporte y exportación de datos a CSV.
+**TaxiNeto360** es una app para conductores y empresas de taxi que facilita el registro de jornadas y la liquidación real de cada turno: entradas/salidas, horas y minutos trabajados, kilómetros recorridos, número de servicios, licencias, empresa, adjuntos (fotos) y exportación a CSV.
 
 ---
 
-## Enlaces oficiales
+## 🔗 Enlaces oficiales (GitHub Pages)
 
-- **Política de Privacidad:** https://pau111000.github.io/taxineto360-web/politica-privacidad-taxineto360.html  
+- **Sitio (portada):** https://pau111000.github.io/taxineto360-web/
+- **Política de Privacidad:** https://pau111000.github.io/taxineto360-web/politica-privacidad-taxineto360.html
 - **Términos y Condiciones:** https://pau111000.github.io/taxineto360-web/terminos.html
+- **Eliminar cuenta y datos (web):** https://pau111000.github.io/taxineto360-web/eliminar-cuenta.html
 
-> Estos documentos están disponibles públicamente en GitHub Pages. La URL de la política es la que se usa también en Google Play.
+> La **URL de Política** se usa en Google Play (App content → Privacy policy).  
+> La **URL de Eliminación** se usa en Google Play (Data safety → Data deletion → *Delete account URL*).
 
 ---
 
 ## Qué hace la app
 
 - **Inicio de sesión y registro** con correo y contraseña (Firebase Authentication).
-- **Sesión persistente**: el usuario permanece conectado hasta cerrar sesión manualmente.
-- **Registro de jornada**: inicio/fin de turno, horas y minutos trabajados, kilómetros, número de servicios, empresa, licencia y conductor.
-- **Cálculo de liquidaciones**: totales por jornada, saldo neto del conductor y del jefe/empresa.
-- **Historial completo** de jornadas para consulta y auditoría interna.
-- **Adjuntos**: posibilidad de subir fotos como evidencia o constancia para el jefe.
-- **Exportación**: descarga de reportes en formato **CSV**.
+- **Sesión persistente** hasta cerrar sesión manualmente.
+- **Registro de jornada:** inicio/fin de turno, horas/minutos, km, servicios, empresa, licencia, conductor.
+- **Cálculo de liquidaciones:** totales por jornada, saldo neto del conductor y del jefe/empresa.
+- **Historial completo** de jornadas.
+- **Adjuntos:** subir fotos como evidencia/constancia.
+- **Exportación:** reportes en **CSV**.
 
 ---
 
 ## Permisos y datos
 
 **Permisos solicitados:**
-- **Cámara** y **galería** para adjuntar fotos.
-- **Almacenamiento/descargas** para exportar y guardar archivos CSV.
+- **Cámara/Galería** para adjuntar fotos.
+- **Almacenamiento/Descargas** para exportar/guardar CSV.
 
-**Datos que se gestionan:**
-- **Cuenta**: correo electrónico y contraseña (gestionado por Firebase Auth).
-- **Operativa**: horarios de entrada y salida, horas/minutos trabajados, kilómetros, número de servicios.
-- **Identificación laboral**: empresa, conductor, licencia asignada.
-- **Económicos**: importes de jornada, totales de liquidación, saldos.
-- **Archivos**: fotografías adjuntas y CSV generados.
+**Datos gestionados:**
+- **Cuenta:** correo + contraseña (Firebase Auth).
+- **Operativa:** horarios de entrada/salida, horas/minutos, km, servicios.
+- **Identificación laboral:** empresa, conductor, licencia.
+- **Económicos:** importes de jornada, liquidaciones y saldos.
+- **Archivos:** fotos y CSV generados.
 
-> El acceso a los datos se restringe por usuario. Cada cuenta solo ve y gestiona su propia información.
+> El acceso a los datos está restringido por usuario (reglas de Firestore/Storage).
 
 ---
 
 ## Tecnología
 
-- **Firebase Authentication** (cuentas de usuario con email/contraseña).
-- **Firebase Firestore** (base de datos de jornadas e historial).
-- **Firebase Storage** (almacenamiento de fotos y CSV).
-- **Android (Jetpack Compose)** para la interfaz y experiencia móvil.
+- **Firebase Authentication** (cuentas).
+- **Firebase Firestore** (jornadas e historial).
+- **Firebase Storage** (fotos y CSV).
+- **Android · Jetpack Compose** (UI).
 
 ---
 
-## Soporte
+## 📄 Archivos de este repositorio
 
-- **Contacto:** taxi360barcelona@gmail.com
+- `index.html` — Portada con enlaces a todos los documentos.
+- `politica-privacidad-taxineto360.html` — Política de Privacidad pública.
+- `terminos.html` — Términos y Condiciones.
+- `eliminar-cuenta.html` — Página web para iniciar eliminación de cuenta y datos.
+- (Opcional) `README.md` — Este documento.
+
+
+## Recordatorio para Google Play
+
+- **Privacy policy URL:** `https://pau111000.github.io/taxineto360-web/politica-privacidad-taxineto360.html`  
+- **Delete account URL:** `https://pau111000.github.io/taxineto360-web/eliminar-cuenta.html`
+
+Dentro de la app, incluye un botón visible **“Eliminar cuenta y datos”** (Ajustes → Privacidad) que borre cuenta y datos automáticamente.
 
 ---
 
-## Actualizaciones de estos documentos
+##  Soporte
 
-Para mantener la documentación legal al día, se editan los archivos HTML en este repositorio y se publican automáticamente mediante GitHub Pages. Las URLs anteriores permanecen estables.
+- Email: **taxi360barcelona@gmail.com**
 
 ---
 
-## Copyright
+## © Copyright
 
 © TaxiNeto360. Todos los derechos reservados.
+
