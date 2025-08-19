@@ -9,7 +9,12 @@
   <style>
     :root{--bg:#0b1220;--card:#0f172a;--fg:#e5e7eb;--muted:#94a3b8;--link:#60a5fa}
     *{box-sizing:border-box}
-    body{margin:0;background:linear-gradient(180deg,#0b1220,#0b1220 40%,#111827);font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Helvetica,Arial,sans-serif;color:var(--fg)}
+    body{
+      margin:0;
+      background:linear-gradient(180deg,#0b1220,#0b1220 40%,#111827);
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Helvetica,Arial,sans-serif;
+      color:var(--fg)
+    }
     .wrap{max-width:860px;margin:48px auto;padding:0 20px}
     header{margin-bottom:24px}
     h1{margin:0 0 6px;font-size:1.9rem}
@@ -20,33 +25,6 @@
     a{color:var(--link);text-decoration:none}
     a:hover{text-decoration:underline}
     footer{margin-top:28px;color:var(--muted);font-size:.95rem}
-
-    /* ========= Comparativa de planes (oscuro) ========= */
-    .tn360-planes{max-width:1100px;margin:36px auto 0;padding:0}
-    .tn360-planes h2{font-size:1.7rem;margin:0 0 8px}
-    .tn360-planes p.meta{color:var(--muted); margin:0 0 18px}
-    .tn360-grid{display:grid; gap:14px; grid-template-columns:repeat(1,minmax(0,1fr))}
-    @media (min-width:720px){.tn360-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-    @media (min-width:980px){.tn360-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
-    .tn-card{background:var(--card); border:1px solid #1f2937; border-radius:14px; padding:16px}
-    .tn-head{display:flex;flex-direction:column;gap:6px;margin-bottom:8px}
-    .tn-type{font-size:.9rem;color:var(--muted)}
-    .tn-plan{display:flex;align-items:center;gap:8px;justify-content:space-between}
-    .tn-k{font-weight:600}
-    .tn-badge{border:1px solid #334155; color:#cbd5e1; border-radius:999px; padding:.15rem .55rem; font-size:.8rem}
-    .tn-badge.pro{border-color:#60a5fa; color:#bae6fd}
-    .tn-price{font-weight:700; font-size:1.05rem}
-    .tn-feats{margin:10px 0 0; padding:0; list-style:none; display:flex; flex-direction:column; gap:8px}
-    .tn-feats li{display:flex; align-items:flex-start; gap:8px}
-    .tn-ok{color:#22c55e; font-weight:600}
-    .tn-warn{color:#eab308; font-weight:600}
-    .tn-no{color:#ef4444; font-weight:600}
-    .tn-cta{margin-top:12px; display:flex; gap:8px; flex-wrap:wrap}
-    .tn-cta a{display:inline-block; border:1px solid #1f2937; border-radius:10px; padding:.5rem .75rem; text-decoration:none}
-    .tn-cta .primary{border-color:#60a5fa; color:#0b1220; background:#60a5fa; font-weight:600}
-    .tn-cta .link{color:#93c5fd}
-    .tn-foot{margin-top:10px; color:var(--muted); font-size:.88rem}
-    .tn-small{color:var(--muted); font-size:.85rem}
   </style>
 </head>
 <body>
@@ -65,7 +43,7 @@
 
       <div class="card">
         <h2>Términos y Condiciones</h2>
-        <p>Condiciones de uso del servicio: elegibilidad, responsabilidades y limitaciones.</p>
+        <p>Condiciones de uso del servicio: elegibilidad, responsabilidades y límites.</p>
         <p><a href="terminos.html">Abrir Términos y Condiciones</a></p>
       </div>
 
@@ -76,105 +54,8 @@
       </div>
     </section>
 
-    <!-- ===== Comparativa de planes integrada ===== -->
-    <section id="planes" class="tn360-planes">
-      <h2>Comparativa de planes</h2>
-      <p class="meta">Elige tu tipo de cuenta y plan. Los precios pueden variar por país e incluir impuestos.</p>
-
-      <div class="tn360-grid">
-        <!-- INDIVIDUAL FREE -->
-        <article class="tn-card">
-          <div class="tn-head">
-            <div class="tn-type">Cuenta</div>
-            <div class="tn-plan">
-              <div class="tn-k">INDIVIDUAL</div>
-              <span class="tn-badge">FREE</span>
-            </div>
-          </div>
-          <ul class="tn-feats">
-            <li><span class="tn-warn">≤ 7</span> jornadas registradas</li>
-            <li><span class="tn-no">Sin</span> adjuntar archivos (fotos/tickets)</li>
-            <li><span class="tn-no">Sin</span> exportación CSV</li>
-            <li>Pestaña <strong>Conductores</strong>: <span class="tn-no">deshabilitada</span></li>
-          </ul>
-          <div class="tn-cta">
-            <a class="link" href="terminos.html#suscripciones">Ver condiciones</a>
-          </div>
-        </article>
-
-        <!-- INDIVIDUAL PRO -->
-        <article class="tn-card">
-          <div class="tn-head">
-            <div class="tn-type">Cuenta</div>
-            <div class="tn-plan">
-              <div class="tn-k">INDIVIDUAL</div>
-              <span class="tn-badge pro">PRO</span>
-            </div>
-            <div class="tn-price">4,99 €/mes · 39,99 €/año</div>
-          </div>
-          <ul class="tn-feats">
-            <li><span class="tn-ok">Ilimitadas</span> jornadas</li>
-            <li><span class="tn-ok">Sí</span> adjuntar archivos</li>
-            <li><span class="tn-ok">Sí</span> exportación CSV</li>
-            <li>Pestaña <strong>Conductores</strong>: <span class="tn-no">no aplica</span></li>
-          </ul>
-          <div class="tn-cta">
-            <a class="primary" href="#abrir-app">Hazte PRO</a>
-            <a class="link" href="terminos.html#suscripciones">Ver condiciones</a>
-          </div>
-        </article>
-
-        <!-- AUTÓNOMO FREE -->
-        <article class="tn-card">
-          <div class="tn-head">
-            <div class="tn-type">Cuenta</div>
-            <div class="tn-plan">
-              <div class="tn-k">AUTÓNOMO</div>
-              <span class="tn-badge">FREE</span>
-            </div>
-          </div>
-          <ul class="tn-feats">
-            <li>Pestaña <strong>Conductores</strong>: <span class="tn-ok">habilitada</span></li>
-            <li><span class="tn-warn">1</span> conductor vinculado activo (máximo)</li>
-            <li>Ver historial y <span class="tn-ok">resúmenes</span> por fechas de ese conductor</li>
-            <li>Tus propias jornadas: <span class="tn-warn">≤ 7</span>, <span class="tn-no">sin</span> adjuntos y <span class="tn-no">sin</span> CSV</li>
-          </ul>
-          <div class="tn-cta">
-            <a class="link" href="terminos.html#suscripciones">Ver condiciones</a>
-          </div>
-          <p class="tn-foot">Las jornadas del conductor se guardan en su cuenta; verlas no consume tu cupo de 7.</p>
-        </article>
-
-        <!-- AUTÓNOMO PRO -->
-        <article class="tn-card">
-          <div class="tn-head">
-            <div class="tn-type">Cuenta</div>
-            <div class="tn-plan">
-              <div class="tn-k">AUTÓNOMO</div>
-              <span class="tn-badge pro">PRO</span>
-            </div>
-            <div class="tn-price">4,99 €/mes · 39,99 €/año</div>
-          </div>
-          <ul class="tn-feats">
-            <li><span class="tn-ok">Hasta 3</span> conductores activos vinculados</li>
-            <li><span class="tn-ok">Hasta 3</span> licencias distintas gestionadas</li>
-            <li>Historiales y <span class="tn-ok">resúmenes</span> por fechas de tus conductores</li>
-            <li>Tus propias jornadas: <span class="tn-ok">ilimitadas</span>, con adjuntos y <span class="tn-ok">CSV</span></li>
-          </ul>
-          <div class="tn-cta">
-            <a class="primary" href="#abrir-app">Hazte PRO</a>
-            <a class="link" href="terminos.html#suscripciones">Ver condiciones</a>
-          </div>
-        </article>
-      </div>
-
-      <p class="tn-small" style="margin-top:14px">
-        * La suscripción se gestiona por Google Play y se renueva automáticamente salvo cancelación. El plan PRO desbloquea funciones según tu tipo de cuenta actual.
-      </p>
-    </section>
-    <!-- ===== Fin comparativa ===== -->
-
     <footer>© TaxiNeto360 • Soporte: <a href="mailto:taxi360barcelona@gmail.com">taxi360barcelona@gmail.com</a></footer>
   </div>
 </body>
 </html>
+
