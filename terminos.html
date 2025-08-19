@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <title>Términos y Condiciones — TaxiNeto360</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Términos de uso de TaxiNeto360: cuentas, uso permitido, suscripciones Free y PRO (mensual/anual), pagos con Google Play, cancelaciones y reembolsos, eliminación de cuenta y soporte." />
+  <meta name="description" content="Términos de uso de TaxiNeto360: cuentas Individual y Autónomo, planes Free y PRO (mensual/anual), pagos con Google Play, cancelaciones, límites de uso y eliminación de cuenta." />
   <meta name="robots" content="noindex" />
   <style>
     :root{--fg:#111;--muted:#6b7280;--link:#0b5fff}
@@ -12,12 +12,17 @@
     h1{margin:0 0 4px 0;font-size:1.8rem}
     .meta{color:var(--muted);margin-bottom:24px}
     h2{margin-top:28px;font-size:1.25rem}
+    h3{margin-top:18px;font-size:1.05rem}
     section{margin:22px 0}
     a{color:var(--link);text-decoration:none}
     a:hover{text-decoration:underline}
     ul{padding-left:20px}
+    code{background:#f2f4f7;padding:2px 6px;border-radius:6px}
     .card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px}
     .pill{display:inline-block;padding:.2rem .55rem;border:1px solid #e5e7eb;border-radius:999px;font-size:.85rem}
+    .grid{display:grid;grid-template-columns:1fr;gap:12px}
+    @media (min-width:760px){.grid{grid-template-columns:1fr 1fr}}
+    .muted{color:#6b7280}
   </style>
 </head>
 <body>
@@ -48,7 +53,7 @@
   <section>
     <h2>Objeto del servicio</h2>
     <p>
-      TaxiNeto360 permite a conductores y empresas de taxi registrar jornadas de trabajo, adjuntar fotos de soporte y calcular la liquidación real de cada turno
+      TaxiNeto360 permite registrar jornadas de trabajo, adjuntar fotos de soporte y calcular la liquidación real de cada turno
       (horas/minutos trabajados, kilómetros, número de servicios, saldos), así como exportar datos a CSV.
     </p>
   </section>
@@ -90,58 +95,84 @@
     <p>La denegación de permisos puede limitar ciertas funciones.</p>
   </section>
 
-  <section id="suscripciones" class="card">
-    <h2>Suscripciones y planes</h2>
-    <p>
-      TaxiNeto360 ofrece un plan <span class="pill">FREE</span> y un plan <span class="pill">PRO</span> en modalidad de suscripción a través de
-      <strong>Google Play</strong>.
-    </p>
+  <section id="tipos-cuenta" class="card">
+    <h2>Tipos de cuenta</h2>
+    <div class="grid">
+      <div>
+        <h3><span class="pill">Cuenta INDIVIDUAL</span></h3>
+        <p>Para conductores que gestionan <strong>sus propias</strong> jornadas. No incluye gestión de terceros.</p>
+      </div>
+      <div>
+        <h3><span class="pill">Cuenta AUTÓNOMO</span></h3>
+        <p>Para titulares de licencia/empresa que quieren <strong>invitar a conductores</strong> y consultar sus jornadas y resúmenes.</p>
+      </div>
+    </div>
+    <p class="muted">Puedes elegir tu tipo de cuenta al registrarte. El plan (FREE o PRO) aplica de forma diferente según tu tipo de cuenta.</p>
+  </section>
 
-    <h3>FREE</h3>
+  <section id="suscripciones" class="card">
+    <h2>Planes y límites</h2>
+    <p>TaxiNeto360 ofrece <span class="pill">FREE</span> y <span class="pill">PRO</span> (suscripción Google Play). Las funciones habilitadas dependen de tu tipo de cuenta:</p>
+
+    <h3>INDIVIDUAL FREE</h3>
     <ul>
-      <li>Hasta <strong>1 conductor invitado activo</strong>.</li>
-      <li>Hasta <strong>7 jornadas</strong> registradas.</li>
-      <li>Sin adjuntar archivos (fotos/tickets).</li>
-      <li>Sin exportación CSV.</li>
+      <li>Hasta <strong>7 jornadas</strong> registradas en tu cuenta.</li>
+      <li><strong>Sin</strong> adjuntar archivos (fotos/tickets).</li>
+      <li><strong>Sin</strong> exportación CSV.</li>
+      <li>Pestaña “Conductores” <strong>deshabilitada</strong> (no aplica a cuentas individuales).</li>
     </ul>
 
-    <h3>PRO</h3>
+    <h3>INDIVIDUAL PRO</h3>
     <ul>
-      <li><strong>Conductores ilimitados</strong>.</li>
-      <li><strong>Jornadas ilimitadas</strong>.</li>
+      <li><strong>Jornadas ilimitadas</strong> en tu cuenta.</li>
       <li>Adjuntar archivos en las jornadas.</li>
       <li>Exportación de informes <strong>CSV</strong>.</li>
     </ul>
 
-    <h3>Precios</h3>
+    <h3>AUTÓNOMO FREE</h3>
     <ul>
-      <li><strong>PRO mensual</strong>: 4,99&nbsp;€/mes (ID de producto: <code>pro_monthly</code>).</li>
-      <li><strong>PRO anual</strong>: 39,99&nbsp;€/año (ID de producto: <code>pro_yearly</code>).</li>
-    </ul>
-    <p class="meta">Los precios pueden variar por país y <em>pueden incluir impuestos aplicables</em> según tu ubicación.</p>
-
-    <h3>Compra, renovación y cancelación</h3>
-    <ul>
-      <li>Las suscripciones se compran y facturan mediante <strong>Google Play</strong> a la cuenta de Google asociada.</li>
-      <li>La suscripción se <strong>renueva automáticamente</strong> al final de cada periodo (mensual o anual), salvo cancelación.</li>
-      <li>Puedes cancelar en cualquier momento desde <em>Google Play → Pagos y suscripciones</em>. La cancelación evita futuras renovaciones; el acceso PRO continúa hasta el final del periodo ya pagado.</li>
-      <li>Si se produce un <strong>fallo de cobro</strong> y no se resuelve, al finalizar el periodo en curso el acceso cambiará automáticamente a FREE.</li>
+      <li>Pestaña “Conductores” <strong>habilitada</strong>.</li>
+      <li>Invitar/vincular hasta <strong>1 conductor activo</strong> (máx. 1).</li>
+      <li>Consultar el <strong>historial</strong> y los <strong>resúmenes</strong> (total o por rango) del conductor vinculado.</li>
+      <li>Mismas limitaciones que el plan Individual FREE para las jornadas registradas por el propio autónomo: <strong>máx. 7 jornadas</strong>, sin adjuntos y sin CSV.</li>
+      <li class="muted">Nota: las jornadas de tus conductores se almacenan en sus propias cuentas; verlas no consume tu cupo de 7.</li>
     </ul>
 
-    <h3>Verificación del estado PRO</h3>
-    <p>
-      Tras la compra, el servidor verifica el pago con Google Play y marca tu cuenta como <code>plan="pro"</code>, <code>isPro=true</code> y, si aplica, <code>proUntil</code>.
-      Si detectas discrepancias, contacta con soporte y facilita el ID de compra de Google Play.
-    </p>
+    <h3>AUTÓNOMO PRO</h3>
+    <ul>
+      <li>Invitar/vincular hasta <strong>3 conductores activos</strong> simultáneamente.</li>
+      <li>Hasta <strong>3 licencias distintas</strong> gestionadas.</li>
+      <li>Acceso a los <strong>historiales</strong> y <strong>resúmenes</strong> por fechas de tus conductores.</li>
+      <li>Para las jornadas registradas por el propio autónomo: <strong>ilimitadas</strong>, con adjuntos y <strong>CSV</strong>.</li>
+    </ul>
+
+    <h3>Precios (Google Play)</h3>
+    <ul>
+      <li><strong>PRO mensual</strong>: 4,99&nbsp;€/mes (<code>pro_monthly</code>).</li>
+      <li><strong>PRO anual</strong>: 39,99&nbsp;€/año (<code>pro_yearly</code>).</li>
+    </ul>
+    <p class="muted">Los precios pueden variar por país e incluir impuestos. La suscripción desbloquea PRO según tu tipo de cuenta actual (Individual o Autónomo).</p>
+
+    <h3>Compra, renovación y verificación</h3>
+    <ul>
+      <li>Las suscripciones se gestionan mediante <strong>Google Play</strong> y se <strong>renuevan automáticamente</strong> salvo cancelación.</li>
+      <li>Tras la compra, verificamos el pago y marcamos tu cuenta como <code>plan="pro"</code>, <code>isPro=true</code> y, si aplica, <code>proUntil</code>.</li>
+      <li>Si hay <strong>fallo de cobro</strong> o cancelas, al finalizar el periodo en curso tu acceso pasará a <strong>FREE</strong>.</li>
+    </ul>
+
+    <h3>Vínculos con conductores (cuentas Autónomo)</h3>
+    <ul>
+      <li>Puedes <strong>invitar</strong> conductores por email. Verás su historial y resúmenes cuando acepten.</li>
+      <li>Al <strong>desvincular</strong> a un conductor, dejas de ver sus datos. Si el conductor obtuvo PRO por invitación tuya, su acceso puede volver a FREE salvo que tenga una suscripción PRO propia activa.</li>
+    </ul>
   </section>
 
   <section id="cancelaciones">
     <h2>Cancelaciones y reembolsos</h2>
     <ul>
-      <li>Las suscripciones son auto-renovables. Puedes cancelarlas en cualquier momento desde <em>Google Play → Pagos y suscripciones</em>. La cancelación evita renovaciones futuras; el acceso PRO continúa hasta el final del periodo ya pagado.</li>
-      <li>TaxiNeto360 <strong>no ofrece reembolsos voluntarios</strong> por periodos ya iniciados (mensual o anual), <strong>salvo</strong> lo exigido por la legislación aplicable o por las políticas de Google Play.</li>
+      <li>Puedes cancelar en cualquier momento desde <em>Google Play → Pagos y suscripciones</em>. El acceso PRO continúa hasta el final del periodo ya pagado.</li>
+      <li>TaxiNeto360 <strong>no ofrece reembolsos voluntarios</strong> por periodos ya iniciados, salvo lo exigido por la legislación aplicable o por las políticas de Google Play.</li>
       <li>Los reembolsos (cuando procedan) se gestionan conforme a las <strong>políticas de Google Play</strong> de tu país. Si Google Play aprueba un reembolso, el acceso PRO podrá retirarse de forma inmediata.</li>
-      <li>Si se produce un <strong>fallo de cobro/renovación</strong> y no se resuelve, al finalizar el periodo en curso el acceso cambiará automáticamente a FREE.</li>
     </ul>
   </section>
 
@@ -199,4 +230,3 @@
   </footer>
 </body>
 </html>
-
