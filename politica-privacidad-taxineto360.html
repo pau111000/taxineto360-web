@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <title>Política de Privacidad — TaxiNeto360</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Política de Privacidad de TaxiNeto360: datos que tratamos, fines, base legal, suscripciones PRO vía Google Play, conservación, seguridad y cómo ejercer tus derechos." />
+  <meta name="description" content="Política de Privacidad de TaxiNeto360: datos que tratamos, fines, base legal, pago único vía Google Play, conservación, seguridad y cómo ejercer tus derechos." />
   <meta name="robots" content="noindex" />
   <style>
     :root{--fg:#111;--muted:#6b7280;--link:#0b5fff}
@@ -49,7 +49,7 @@
       <li><strong>Importes</strong>: taxímetro, VISA, efectivo derivado, propinas, porcentajes conductor/jefe, gastos, netos y saldos.</li>
       <li><strong>Adjuntos</strong>: fotos/archivos que decides subir como soporte (p. ej., tickets). Se guardan en Firebase Storage.</li>
       <li><strong>Exportación</strong>: generación de archivos CSV bajo tu acción.</li>
-      <li><strong>Datos de pago/suscripción</strong> (solo PRO): identificadores de compra y suscripción de Google Play (p. ej., <code>productId</code>, <code>purchaseToken</code>, <code>orderId</code>, estado/fechas) necesarios para verificar tu plan PRO. No almacenamos números de tarjeta ni credenciales bancarias.</li>
+      <li><strong>Datos de pago</strong>: identificadores de compra de Google Play (p. ej., <code>productId</code>, <code>purchaseToken</code>, <code>orderId</code>) necesarios para verificar tu pago único de acceso completo. No almacenamos números de tarjeta ni credenciales bancarias.</li>
       <li><strong>Registros técnicos</strong>: información mínima para seguridad y diagnóstico (p. ej., marcas de tiempo, UIDs que ejecutan acciones). No usamos tu geolocalización.</li>
     </ul>
   </section>
@@ -59,7 +59,7 @@
     <ul>
       <li>Datos proporcionados por ti al crear la cuenta, registrar jornadas o aceptar invitaciones.</li>
       <li>Datos generados por la app al calcular importes y saldos.</li>
-      <li>Datos proporcionados por Google Play al gestionar compras/suscripciones.</li>
+      <li>Datos proporcionados por Google Play al gestionar tu compra.</li>
     </ul>
   </section>
 
@@ -68,23 +68,23 @@
     <p>Un autónomo puede invitar a un conductor. Si el conductor acepta, el autónomo obtiene acceso en <em>solo lectura</em> al historial del conductor hasta que este vínculo sea revocado o eliminado. El conductor puede revocar el acceso en cualquier momento.</p>
   </section>
 
-  <section class="card" id="suscripciones">
-    <h2>Suscripciones PRO y pagos con Google Play</h2>
-    <p>Ofrecemos un plan PRO con suscripción <strong>mensual</strong> (<code>pro_monthly</code>) y <strong>anual</strong> (<code>pro_yearly</code>) gestionadas por <strong>Google Play</strong>. Google Play es el comerciante que procesa el cobro.</p>
+  <section class="card" id="pagos">
+    <h2>Pago único en Google Play</h2>
+    <p>El acceso completo a TaxiNeto360 requiere un <strong>pago único de 19,99 €</strong> gestionado por <strong>Google Play</strong>. Google Play es el comerciante que procesa el cobro.</p>
     <h3>Qué datos de pago tratamos</h3>
     <ul>
-      <li>Identificadores de compra (por ejemplo, <code>purchaseToken</code>, <code>productId</code> y <code>orderId</code>) y estado de la suscripción, para verificar tu acceso PRO.</li>
+      <li>Identificadores de compra (por ejemplo, <code>purchaseToken</code>, <code>productId</code> y <code>orderId</code>) y estado de la compra, para verificar tu acceso completo.</li>
       <li>No tratamos tu tarjeta ni cuenta bancaria: esos datos los gestiona Google Play.</li>
     </ul>
-    <h3>Verificación y estado PRO</h3>
-    <p>Tras la compra, nuestro servidor verifica el <em>token</em> con Google Play. Si es válido, marcamos tu cuenta con <code>plan="pro"</code>, <code>isPro=true</code> y, si aplica, <code>proUntil</code>. Si la renovación falla o cancelas desde Google Play, al terminar el periodo tu acceso volverá a FREE.</p>
+    <h3>Verificación y estado</h3>
+    <p>Tras la compra, nuestro servidor verifica el <em>token</em> con Google Play. Si es válido, tu cuenta queda marcada con acceso completo a la app. No hay renovaciones ni cargos recurrentes.</p>
   </section>
 
   <section>
     <h2>Finalidades y bases legales</h2>
     <ul>
       <li><strong>Prestación del servicio</strong> (art. 6.1.b RGPD): crear tu cuenta, mantener sesión, registrar/mostrar jornadas, adjuntar fotos y exportar CSV.</li>
-      <li><strong>Gestión de suscripciones y cobros</strong> (art. 6.1.b RGPD): verificación de pagos y mantenimiento del estado PRO.</li>
+      <li><strong>Gestión de cobros</strong> (art. 6.1.b RGPD): verificación de tu pago único de 19,99 €.</li>
       <li><strong>Interés legítimo</strong> (art. 6.1.f RGPD): seguridad, prevención de abusos, soporte y mejoras operativas.</li>
       <li><strong>Cumplimiento legal</strong> (art. 6.1.c RGPD): conservación mínima necesaria ante obligaciones fiscales o requerimientos legales.</li>
     </ul>
@@ -94,7 +94,7 @@
     <h2>Conservación</h2>
     <ul>
       <li>Mantenemos los datos mientras tu cuenta esté activa o hasta que solicites su eliminación.</li>
-      <li>Conservamos los identificadores de compra y registros necesarios mientras sea imprescindible para verificar tu plan PRO y cumplir obligaciones legales.</li>
+      <li>Conservamos los identificadores de compra y registros necesarios mientras sea imprescindible para verificar tu pago y cumplir obligaciones legales.</li>
     </ul>
   </section>
 
@@ -102,7 +102,7 @@
     <h2>Con quién compartimos</h2>
     <ul>
       <li><strong>Google Firebase</strong> (Auth, Firestore, Storage, Functions) como encargado del tratamiento para alojamiento y funciones del servicio.</li>
-      <li><strong>Google Play</strong> para la gestión de compras/suscripciones.</li>
+      <li><strong>Google Play</strong> para la gestión del pago.</li>
       <li><strong>Correo electrónico</strong> (p. ej., servicio SMTP) únicamente para enviar invitaciones/avisos operativos cuando lo configuras. No enviamos publicidad de terceros.</li>
     </ul>
     <p>Los proveedores pueden operar dentro y fuera de la UE. Aplicamos salvaguardas adecuadas (p. ej., cláusulas contractuales tipo) cuando procede.</p>
