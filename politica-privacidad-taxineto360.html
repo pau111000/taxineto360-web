@@ -1,326 +1,471 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Política de Privacidad — TaxiNeto360</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Política de Privacidad de TaxiNeto360: datos tratados, finalidades, base legal, conservación, seguridad, pagos gestionados por Google Play y derechos RGPD." />
-  <meta name="robots" content="noindex" />
+  <meta name="description" content="Política de privacidad de TaxiNeto360. Cómo tratamos tus datos personales según el RGPD y la LOPD-GDD." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
   <style>
-    :root{--fg:#111;--muted:#6b7280;--link:#0b5fff}
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Helvetica,Arial,sans-serif;color:var(--fg);max-width:960px;margin:40px auto;padding:0 16px;line-height:1.65}
-    h1{margin:0 0 4px 0;font-size:1.85rem}
-    .meta{color:var(--muted);margin-bottom:24px}
-    h2{margin-top:28px;font-size:1.25rem}
-    h3{margin-top:18px;font-size:1.05rem}
-    section{margin:22px 0}
-    a{color:var(--link);text-decoration:none}
-    a:hover{text-decoration:underline}
-    ul,ol{padding-left:20px}
-    code{background:#f2f4f7;padding:2px 6px;border-radius:6px}
-    .card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px}
-    .notice{background:#f8fafc;border:1px solid #e5e7eb;border-radius:12px;padding:12px;margin:16px 0;color:#334155}
-    nav.toc{border:1px solid #e5e7eb;border-radius:12px;padding:14px;background:#fff}
-    nav.toc ul{margin:0;padding-left:18px}
-    .muted{color:var(--muted)}
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --gold: #C8A84E; --gold-light: #E2C97A; --gold-dim: rgba(200,168,78,0.12);
+      --gold-border: rgba(200,168,78,0.22); --black: #080808; --surface: #0f0f0f;
+      --surface2: #141414; --surface3: #1a1a1a; --text: #f0ede8;
+      --text-dim: rgba(240,237,232,0.58); --text-faint: rgba(240,237,232,0.32);
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--text); line-height: 1.7; overflow-x: hidden; }
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: var(--black); }
+    ::-webkit-scrollbar-thumb { background: var(--gold-border); border-radius: 2px; }
+    ::selection { background: var(--gold-dim); color: var(--gold-light); }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(8,8,8,0.9); backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(200,168,78,0.08); padding: 0 24px;
+    }
+    .nav-inner {
+      max-width: 900px; margin: 0 auto; height: 60px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-logo {
+      display: flex; align-items: center; gap: 8px;
+      font-weight: 800; font-size: 15px; color: var(--text); text-decoration: none;
+    }
+    .nav-logo-icon {
+      width: 28px; height: 28px; background: var(--gold); border-radius: 7px;
+      display: flex; align-items: center; justify-content: center; font-size: 13px;
+    }
+    .nav-back {
+      display: flex; align-items: center; gap: 6px;
+      font-size: 13px; color: var(--text-faint); text-decoration: none;
+      transition: color 0.15s;
+    }
+    .nav-back:hover { color: var(--gold); }
+    .nav-legal-links { display: flex; gap: 4px; }
+    .nav-legal-links a {
+      font-size: 12px; color: var(--text-faint); text-decoration: none;
+      padding: 5px 10px; border-radius: 6px; transition: all 0.15s;
+    }
+    .nav-legal-links a:hover { color: var(--text); background: rgba(255,255,255,0.05); }
+    .nav-legal-links a.active { color: var(--gold); }
+
+    /* LAYOUT */
+    .page-wrap {
+      max-width: 900px; margin: 0 auto; padding: 100px 24px 80px;
+      display: grid; grid-template-columns: 220px 1fr; gap: 64px; align-items: start;
+    }
+
+    /* SIDEBAR */
+    .sidebar { position: sticky; top: 88px; }
+    .sidebar-title { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+    .sidebar-nav { display: flex; flex-direction: column; gap: 2px; }
+    .sidebar-nav a {
+      font-size: 12.5px; color: var(--text-faint); text-decoration: none;
+      padding: 6px 12px; border-radius: 6px; border-left: 2px solid transparent;
+      transition: all 0.15s; line-height: 1.4;
+    }
+    .sidebar-nav a:hover { color: var(--text); background: rgba(255,255,255,0.04); border-left-color: var(--gold-border); }
+    .sidebar-nav a.active { color: var(--gold); border-left-color: var(--gold); background: var(--gold-dim); }
+    .sidebar-contact {
+      margin-top: 28px; padding: 16px; background: var(--surface);
+      border: 1px solid var(--gold-border); border-radius: 12px;
+    }
+    .sidebar-contact-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gold); margin-bottom: 8px; }
+    .sidebar-contact a { font-size: 12px; color: var(--text-dim); text-decoration: none; display: block; transition: color 0.15s; word-break: break-all; }
+    .sidebar-contact a:hover { color: var(--gold); }
+
+    /* CONTENT */
+    .doc-header { margin-bottom: 56px; }
+    .doc-tag {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--gold-dim); border: 1px solid var(--gold-border);
+      color: var(--gold); font-size: 11px; font-weight: 600; letter-spacing: 0.08em;
+      text-transform: uppercase; padding: 4px 12px; border-radius: 100px; margin-bottom: 20px;
+    }
+    .doc-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(32px, 5vw, 48px); line-height: 1.15; letter-spacing: -0.02em;
+      margin-bottom: 20px;
+    }
+    .doc-meta {
+      display: flex; flex-wrap: wrap; gap: 20px;
+      font-size: 13px; color: var(--text-faint);
+      padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.07);
+    }
+    .doc-meta span { display: flex; align-items: center; gap: 6px; }
+    .doc-meta strong { color: var(--text-dim); font-weight: 500; }
+
+    /* SECTIONS */
+    .doc-section { margin-bottom: 52px; scroll-margin-top: 88px; }
+    .doc-section-title {
+      font-size: 20px; font-weight: 700; margin-bottom: 16px;
+      display: flex; align-items: center; gap: 10px;
+      padding-bottom: 14px; border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .section-num {
+      width: 26px; height: 26px; border-radius: 50%;
+      background: var(--gold-dim); border: 1px solid var(--gold-border);
+      color: var(--gold); font-size: 11px; font-weight: 700;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .doc-section p { font-size: 14.5px; color: var(--text-dim); line-height: 1.75; margin-bottom: 14px; }
+    .doc-section p:last-child { margin-bottom: 0; }
+    .doc-section h4 { font-size: 14px; font-weight: 700; color: var(--text); margin: 20px 0 10px; }
+    .doc-section ul, .doc-section ol { padding-left: 0; list-style: none; display: flex; flex-direction: column; gap: 8px; margin-bottom: 14px; }
+    .doc-section ul li, .doc-section ol li {
+      font-size: 14px; color: var(--text-dim); line-height: 1.65;
+      padding-left: 20px; position: relative;
+    }
+    .doc-section ul li::before { content: '—'; position: absolute; left: 0; color: var(--gold); font-weight: 700; }
+    .doc-section ol { counter-reset: item; }
+    .doc-section ol li { counter-increment: item; }
+    .doc-section ol li::before { content: counter(item) '.'; position: absolute; left: 0; color: var(--gold); font-weight: 700; font-size: 12px; }
+
+    .info-box {
+      background: var(--surface); border: 1px solid var(--gold-border);
+      border-left: 3px solid var(--gold); border-radius: 10px; padding: 18px 20px;
+      margin: 16px 0;
+    }
+    .info-box p { font-size: 13.5px; color: var(--text-dim); margin: 0; }
+    .info-box strong { color: var(--gold); }
+
+    .data-table {
+      width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 13px;
+    }
+    .data-table th {
+      text-align: left; padding: 10px 14px;
+      background: var(--surface2); color: var(--gold);
+      font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+      border-bottom: 1px solid var(--gold-border);
+    }
+    .data-table td {
+      padding: 10px 14px; color: var(--text-dim);
+      border-bottom: 1px solid rgba(255,255,255,0.04); vertical-align: top; line-height: 1.55;
+    }
+    .data-table tr:last-child td { border-bottom: none; }
+    .data-table tr:hover td { background: rgba(255,255,255,0.02); }
+
+    .rights-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 16px 0; }
+    .right-card {
+      background: var(--surface); border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 10px; padding: 16px;
+    }
+    .right-card-title { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+    .right-card-text { font-size: 12.5px; color: var(--text-faint); line-height: 1.55; }
+
+    /* FOOTER */
+    .doc-footer {
+      max-width: 900px; margin: 0 auto; padding: 32px 24px 48px;
+      border-top: 1px solid rgba(200,168,78,0.08);
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;
+    }
+    .doc-footer-logo {
+      display: flex; align-items: center; gap: 8px;
+      font-weight: 800; font-size: 14px; color: var(--text); text-decoration: none;
+    }
+    .doc-footer-logo-icon {
+      width: 26px; height: 26px; background: var(--gold); border-radius: 6px;
+      display: flex; align-items: center; justify-content: center; font-size: 12px;
+    }
+    .doc-footer-links { display: flex; gap: 16px; flex-wrap: wrap; }
+    .doc-footer-links a { font-size: 12px; color: var(--text-faint); text-decoration: none; transition: color 0.15s; }
+    .doc-footer-links a:hover { color: var(--gold); }
+
+    @media (max-width: 700px) {
+      .page-wrap { grid-template-columns: 1fr; gap: 32px; }
+      .sidebar { position: static; display: none; }
+      .rights-grid { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
-
 <body>
-  <header>
-    <h1>Política de Privacidad</h1>
-    <p class="meta">
-      TaxiNeto360 • Última actualización: 11/04/2026 •
-      Contacto: <a href="mailto:taxi360barcelona@gmail.com">taxi360barcelona@gmail.com</a>
-    </p>
-  </header>
 
-  <nav class="toc" aria-label="Tabla de contenidos">
-    <strong>Contenido</strong>
-    <ul>
-      <li><a href="#responsable">Responsable del tratamiento</a></li>
-      <li><a href="#ambito">Ámbito y principios</a></li>
-      <li><a href="#quienes">Quiénes somos</a></li>
-      <li><a href="#disponibilidad">Disponibilidad</a></li>
-      <li><a href="#datos">Datos que tratamos</a></li>
-      <li><a href="#origen">Origen de los datos</a></li>
-      <li><a href="#relaciones">Relaciones gestor ↔ conductor</a></li>
-      <li><a href="#visibilidad">Visibilidad de datos (invitaciones)</a></li>
-      <li><a href="#pagos">Suscripciones y pagos</a></li>
-      <li><a href="#finalidades">Finalidades y base legal</a></li>
-      <li><a href="#conservacion">Conservación</a></li>
-      <li><a href="#compartimos">Con quién compartimos</a></li>
-      <li><a href="#transferencias">Transferencias internacionales</a></li>
-      <li><a href="#seguridad">Seguridad</a></li>
-      <li><a href="#derechos">Tus derechos</a></li>
-      <li><a href="#borrado">Eliminación de cuenta y datos</a></li>
-      <li><a href="#menores">Menores de edad</a></li>
-      <li><a href="#cookies">Cookies y tecnologías similares</a></li>
-      <li><a href="#cambios">Cambios en esta política</a></li>
-      <li><a href="#contacto">Contacto</a></li>
-    </ul>
-  </nav>
+<nav>
+  <div class="nav-inner">
+    <a href="https://taxi360.app" class="nav-logo">
+      <div class="nav-logo-icon">🚕</div>
+      TaxiNeto360
+    </a>
+    <div class="nav-legal-links">
+      <a href="politica-privacidad-taxineto360.html" class="active">Privacidad</a>
+      <a href="terminos.html">Términos</a>
+      <a href="eliminar-cuenta.html">Eliminar cuenta</a>
+    </div>
+    <a href="https://taxi360.app" class="nav-back">← Volver a la web</a>
+  </div>
+</nav>
 
-  <section id="responsable" class="card">
-    <h2>Responsable del tratamiento</h2>
-    <p class="muted"></p>
-    <ul>
-      <li><strong>Responsable:</strong> [NOMBRE SOCIAL COMPLETO / TITULAR]</li>
-      <li><strong>NIF/CIF:</strong> [●]</li>
-      <li><strong>Domicilio:</strong> [Calle, nº, CP, Barcelona (España)]</li>
-      <li><strong>Correo de privacidad:</strong> [privacy@tudominio.com]</li>
-      <li><strong>Correo soporte:</strong> <a href="mailto:taxi360barcelona@gmail.com">taxi360barcelona@gmail.com</a></li>
-    </ul>
-  </section>
+<div class="page-wrap">
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-title">Contenido</div>
+    <nav class="sidebar-nav">
+      <a href="#responsable">Responsable</a>
+      <a href="#ambito">Ámbito y principios</a>
+      <a href="#quienes">Quiénes somos</a>
+      <a href="#datos">Datos que tratamos</a>
+      <a href="#origen">Origen de los datos</a>
+      <a href="#relaciones">Relaciones gestor ↔ conductor</a>
+      <a href="#visibilidad">Visibilidad de datos</a>
+      <a href="#suscripciones">Suscripciones y pagos</a>
+      <a href="#finalidades">Finalidades y base legal</a>
+      <a href="#conservacion">Conservación</a>
+      <a href="#compartimos">Con quién compartimos</a>
+      <a href="#transferencias">Transferencias internacionales</a>
+      <a href="#seguridad">Seguridad</a>
+      <a href="#derechos">Tus derechos</a>
+      <a href="#eliminacion">Eliminación de cuenta</a>
+      <a href="#menores">Menores de edad</a>
+      <a href="#cookies">Cookies</a>
+      <a href="#cambios">Cambios en esta política</a>
+    </nav>
+    <div class="sidebar-contact">
+      <div class="sidebar-contact-label">Contacto privacidad</div>
+      <a href="mailto:taxi360barcelona@gmail.com">taxi360barcelona@gmail.com</a>
+    </div>
+  </aside>
 
-  <section id="ambito">
-    <h2>Ámbito de esta política</h2>
-    <p>
-      Esta Política describe cómo tratamos tus datos personales cuando utilizas TaxiNeto360.
-      Aplicamos la normativa vigente, en particular el Reglamento (UE) 2016/679 (RGPD) y la Ley Orgánica 3/2018 (LOPDGDD),
-      y los principios de licitud, transparencia, minimización, limitación de finalidad, exactitud, integridad y confidencialidad.
-    </p>
-    <div class="notice">La app no está dirigida a menores. Consulta el apartado <strong>“Menores de edad”</strong>.</div>
-  </section>
+  <!-- MAIN CONTENT -->
+  <main>
+    <div class="doc-header">
+      <div class="doc-tag">🔒 Documento legal</div>
+      <h1 class="doc-title">Política de<br/>Privacidad</h1>
+      <div class="doc-meta">
+        <span>📅 <strong>Última actualización:</strong> 11/04/2026</span>
+        <span>🏢 <strong>Empresa:</strong> TaxiNeto360</span>
+        <span>✉ <strong>Contacto:</strong> taxi360barcelona@gmail.com</span>
+      </div>
+    </div>
 
-  <section id="quienes">
-    <h2>Quiénes somos</h2>
-    <p>
-      TaxiNeto360 es una aplicación móvil de gestión integral para el sector del taxi con más de 15 herramientas:
-      registro de jornadas (Mi Jornada), vuelos en tiempo real (LlegadasDay!), cálculo de tarifas (TarifaGo),
-      rendimiento y neto (Neto Apps), historial (Mi Historial), calendario de turnos (MiCalendario),
-      eventos con alta demanda (MisEventos), puntos de interés (MiCiudad),
-      gasolineras económicas (MiGasolinera), trenes y buses (Trenes / Buses), cruceros y ferris (Barcos),
-      tráfico en directo (Tráfico), traductor con voz (Tradúceme), alertas de control de velocidad — radares fijos y móviles — (Mapa Taxi),
-      navegación GPS exclusiva para taxistas (GPS Taxi),
-      gestión de flotas (Conductores), evidencias con fotos, liquidaciones automáticas
-      y exportación en CSV, PDF, Excel y HTML.
-    </p>
-  </section>
+    <div class="doc-section" id="responsable">
+      <div class="doc-section-title"><span class="section-num">1</span>Responsable del tratamiento</div>
+      <div class="info-box">
+        <p><strong>Responsable:</strong> [NOMBRE SOCIAL COMPLETO / TITULAR]<br/>
+        <strong>NIF/CIF:</strong> [●]<br/>
+        <strong>Domicilio:</strong> [Calle, nº, CP, Barcelona (España)]<br/>
+        <strong>Correo de privacidad:</strong> [privacy@tudominio.com]<br/>
+        <strong>Correo soporte:</strong> taxi360barcelona@gmail.com</p>
+      </div>
+    </div>
 
-  <section id="disponibilidad">
-    <h2>Disponibilidad de la app</h2>
-    <p>TaxiNeto360 está disponible para su descarga a través de <strong>Google Play (Play Store)</strong>.</p>
-  </section>
+    <div class="doc-section" id="ambito">
+      <div class="doc-section-title"><span class="section-num">2</span>Ámbito y principios</div>
+      <p>Esta Política describe cómo tratamos tus datos personales cuando utilizas TaxiNeto360. Aplicamos la normativa vigente, en particular el Reglamento (UE) 2016/679 (RGPD) y la Ley Orgánica 3/2018 (LOPD-GDD), y los principios de licitud, transparencia, minimización, limitación de finalidad, exactitud, integridad y confidencialidad.</p>
+      <p>La app no está dirigida a menores. Consulta el apartado "Menores de edad".</p>
+    </div>
 
-  <section id="datos">
-    <h2>Datos que tratamos</h2>
-    <ul>
-      <li><strong>Cuenta</strong>: correo electrónico y autenticación (p. ej., Firebase Authentication). No almacenamos tu contraseña en texto claro.</li>
-      <li><strong>Perfil</strong> (opcional): nombre, teléfono y notas internas que decidas añadir.</li>
-      <li><strong>Relaciones</strong>: invitaciones y vínculos entre gestor y conductor (correos/UIDs, estado y fechas).</li>
-      <li><strong>Jornadas</strong>: fecha, horas/minutos, kilómetros, número de servicios, etc.</li>
-      <li><strong>Importes</strong>: taxímetro, VISA, efectivo, propinas, porcentajes, gastos, netos y saldos.</li>
-      <li><strong>Adjuntos</strong>: fotos/archivos subidos por ti como soporte (p. ej., tickets).</li>
-      <li><strong>Exportación</strong>: archivos CSV, PDF, Excel y HTML generados bajo tu acción.</li>
-      <li><strong>Ubicación</strong> (cuando se activa): datos de posición para funciones como MiGasolinera, MiCiudad y Mapa Taxi. No se almacena ni se comparte con terceros. La información de controles de velocidad mostrada en Mapa Taxi es orientativa y no sustituye la señalización oficial.</li>
-      <li><strong>Voz</strong> (cuando se activa): audio procesado localmente para la función Tradúceme (reconocimiento de voz mediante Google ML Kit offline). No se envía a servidores externos.</li>
-      <li><strong>Pagos</strong>: si aplica, solo identificadores técnicos necesarios para verificar acceso (por ejemplo <code>productId</code>, <code>purchaseToken</code>, <code>orderId</code>, estado). No tratamos datos de tarjeta.</li>
-      <li><strong>Registros técnicos</strong>: datos mínimos para seguridad y diagnóstico (p. ej., marcas de tiempo, UID que ejecuta acciones). No usamos geolocalización.</li>
-    </ul>
-  </section>
+    <div class="doc-section" id="quienes">
+      <div class="doc-section-title"><span class="section-num">3</span>Quiénes somos</div>
+      <p>TaxiNeto360 es una aplicación móvil de gestión integral para el sector del taxi con más de 15 herramientas: registro de jornadas (Mi Jornada), vuelos en tiempo real (LlegadasDay!), cálculo de tarifas (TarifaGo), rendimiento y neto (Neto Apps), historial (Mi Historial), calendario de turnos (MiCalendario), eventos con alta demanda (MisEventos), puntos de interés (MiCiudad), gasolineras económicas (MiGasolinera), trenes y buses (Trenes / Buses), cruceros y ferris (Barcos), tráfico en directo (Tráfico), traductor con voz (Tradúceme), alertas de control de velocidad (Mapa Taxi), navegación GPS exclusiva para taxistas (GPS Taxi), gestión de flotas (Conductores), evidencias con fotos, liquidaciones automáticas y exportación en CSV, PDF, Excel y HTML.</p>
+      <p>La app está disponible en Google Play y funciona en Android. Los datos se almacenan en Firebase (Google Cloud, región Europe West — eur3).</p>
+    </div>
 
-  <section id="origen">
-    <h2>Origen de los datos</h2>
-    <ul>
-      <li>Datos proporcionados por ti al crear la cuenta, registrar jornadas o aceptar invitaciones.</li>
-      <li>Datos generados por la app al calcular importes y saldos.</li>
-      <li>Si hay pagos: información de estado aportada por Google Play para verificar suscripciones.</li>
-    </ul>
-  </section>
+    <div class="doc-section" id="datos">
+      <div class="doc-section-title"><span class="section-num">4</span>Datos que tratamos</div>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Categoría</th>
+            <th>Datos concretos</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Identificación y cuenta</td>
+            <td>Correo electrónico, UID de Firebase Auth, método de autenticación (email/contraseña o Google Sign-In), fecha de creación, nombre de conductor (opcional)</td>
+          </tr>
+          <tr>
+            <td>Jornadas y registros</td>
+            <td>Fecha, hora de inicio/fin, importes del taxímetro, VISA, efectivo, propinas, porcentajes, gastos, netos y saldos</td>
+          </tr>
+          <tr>
+            <td>Adjuntos</td>
+            <td>Fotos/archivos subidos por ti como soporte (ej. tickets)</td>
+          </tr>
+          <tr>
+            <td>Exportación</td>
+            <td>Archivos CSV, PDF, Excel y HTML generados bajo tu acción</td>
+          </tr>
+          <tr>
+            <td>Ubicación (cuando se activa)</td>
+            <td>Datos de posición para funciones como MiGasolinera, MiCiudad y Mapa Taxi. No se almacena ni comparte</td>
+          </tr>
+          <tr>
+            <td>Voz (cuando se activa)</td>
+            <td>Audio procesado localmente para Tradúceme (Google ML Kit offline). No se envía a servidores externos</td>
+          </tr>
+          <tr>
+            <td>Pagos</td>
+            <td>Solo identificadores técnicos (productId, purchaseToken, orderId, estado). No tratamos datos de tarjeta</td>
+          </tr>
+          <tr>
+            <td>Registros técnicos</td>
+            <td>Datos mínimos para seguridad y diagnóstico (marcas de tiempo, UID). Sin geolocalizar</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-  <section id="relaciones" class="card">
-    <h2>Relaciones entre cuentas (gestor ↔ conductor)</h2>
-    <p>
-      Un gestor puede invitar a un conductor. Si el conductor acepta, el gestor obtiene acceso al historial del conductor
-      dentro del entorno de la cuenta vinculada hasta que el vínculo sea revocado o eliminado.
-    </p>
-    <p class="muted">
-      Si no deseas compartir tu historial con un gestor, no aceptes la invitación. Cuando la app lo permita, podrás revocar el acceso.
-    </p>
-  </section>
+    <div class="doc-section" id="origen">
+      <div class="doc-section-title"><span class="section-num">5</span>Origen de los datos</div>
+      <ul>
+        <li>Datos proporcionados directamente por ti al crear una cuenta o usar la app</li>
+        <li>Datos generados automáticamente por el uso de la app (registros técnicos mínimos)</li>
+        <li>No recibimos datos de terceros sobre ti</li>
+      </ul>
+    </div>
 
-  <section id="visibilidad" class="card">
-    <h2>Visibilidad de datos al aceptar una invitación (importante para conductores)</h2>
-    <p>
-      Si eres <strong>conductor</strong> y aceptas una invitación de un <strong>gestor</strong>, dicho gestor podrá <strong>visualizar</strong>
-      la información asociada a las jornadas que registres dentro de la app.
-    </p>
-    <ul>
-      <li><strong>Datos visibles</strong>: fechas, horas/minutos, kilómetros, número de servicios, importes (taxímetro, VISA, efectivo, propinas), porcentajes, <strong>ganancias netas</strong>, gastos, saldos y demás campos de jornada.</li>
-      <li><strong>Adjuntos</strong>: fotos o archivos de soporte subidos por el conductor (tickets/capturas) también podrán ser accesibles por el gestor.</li>
-      <li><strong>Exportación</strong>: el gestor podrá exportar y descargar la información (CSV, PDF, Excel y HTML) cuando la funcionalidad esté disponible.</li>
-    </ul>
-  </section>
+    <div class="doc-section" id="relaciones">
+      <div class="doc-section-title"><span class="section-num">6</span>Relaciones gestor ↔ conductor</div>
+      <p>Si eres gestor de flota, puedes invitar a conductores. Si aceptan la invitación, el gestor puede acceder a sus registros de jornada con fines de gestión. El conductor puede revocar el acceso en cualquier momento desde la app. Esta relación se basa en el consentimiento del conductor (art. 6.1.a RGPD).</p>
+    </div>
 
-  <section id="pagos" class="card">
-    <h2>Suscripciones y pagos</h2>
+    <div class="doc-section" id="visibilidad">
+      <div class="doc-section-title"><span class="section-num">7</span>Visibilidad de datos (invitaciones)</div>
+      <p>Cuando un conductor acepta una invitación de un gestor, ese gestor accede únicamente a los datos de jornada del conductor dentro de la app. Ningún otro usuario tiene acceso a tus datos. El conductor puede revocar el vínculo en cualquier momento.</p>
+    </div>
 
-    <h3>Gestión de pagos</h3>
-    <ul>
-      <li>Las suscripciones se gestionan a través de <strong>Google Play (Play Store)</strong>.</li>
-      <li>No tratamos números de tarjeta ni credenciales bancarias.</li>
-      <li>Solo tratamos identificadores técnicos para verificar el acceso a funciones de pago.</li>
-    </ul>
+    <div class="doc-section" id="suscripciones">
+      <div class="doc-section-title"><span class="section-num">8</span>Suscripciones y pagos</div>
+      <p>Las suscripciones se gestionan íntegramente a través de Google Play. No tratamos datos de tarjeta de crédito ni información bancaria. Solo recibimos identificadores técnicos necesarios para verificar el acceso a funciones de pago.</p>
+      <h4>Modelo vigente</h4>
+      <ul>
+        <li><strong>Plan Individual:</strong> 9,99 €/mes (30 días de prueba gratuita)</li>
+        <li><strong>Plan Flota:</strong> 59,99 €/mes (30 días de prueba gratuita)</li>
+        <li><strong>Plan Micro-Influencer:</strong> Gratis (30 días + 14 días extra, a cambio de un vídeo de feedback honesto)</li>
+      </ul>
+      <h4>Programa de afiliados</h4>
+      <p>Los usuarios pueden obtener un código de afiliado. Por cada taxista que se registre con dicho código, el afiliado recibe 30 días gratis de suscripción, acumulable hasta un máximo de 12 meses gratuitos. Los precios y condiciones vigentes serán los mostrados en Google Play en el momento de la compra/renovación.</p>
+    </div>
 
-    <h3>Modelo vigente</h3>
-    <ul>
-      <li><strong>Plan Individual:</strong> <strong>9,99 €/mes</strong> (30 días de prueba gratuita).</li>
-      <li><strong>Plan Flota:</strong> <strong>59,99 €/mes</strong> (30 días de prueba gratuita).</li>
-      <li><strong>Plan Micro-Influencer:</strong> Gratis (30 días + 14 días extra, a cambio de un vídeo de feedback honesto).</li>
-    </ul>
+    <div class="doc-section" id="finalidades">
+      <div class="doc-section-title"><span class="section-num">9</span>Finalidades y bases legales</div>
+      <ul>
+        <li><strong>Prestación del servicio (art. 6.1.b RGPD):</strong> crear tu cuenta, registrar/mostrar jornadas, adjuntar soportes y exportar datos</li>
+        <li><strong>Gestión de invitaciones y vínculos (art. 6.1.b RGPD):</strong> permitir invitaciones y el acceso del gestor cuando el conductor acepta</li>
+        <li><strong>Gestión del acceso a planes (art. 6.1.b RGPD):</strong> verificar el estado de la suscripción y habilitar funciones Premium</li>
+        <li><strong>Programa de afiliados (art. 6.1.b RGPD):</strong> gestionar códigos de afiliado y las recompensas asociadas</li>
+        <li><strong>Seguridad y diagnóstico (interés legítimo, art. 6.1.f RGPD):</strong> mantener la integridad del servicio</li>
+        <li><strong>Cumplimiento legal (art. 6.1.c RGPD):</strong> conservar información mínima cuando la ley lo requiera</li>
+      </ul>
+    </div>
 
-    <h3>Programa de afiliados</h3>
-    <p>
-      Los usuarios pueden obtener un código de afiliado. Por cada taxista que se registre con dicho código, el afiliado recibe <strong>30 días gratis</strong> de suscripción, acumulable hasta un máximo de <strong>12 meses gratuitos</strong>.
-    </p>
+    <div class="doc-section" id="conservacion">
+      <div class="doc-section-title"><span class="section-num">10</span>Conservación</div>
+      <p>Conservamos tus datos mientras mantengas una cuenta activa. Tras la eliminación de tu cuenta, suprimiremos tus datos en el menor plazo posible, salvo que debamos conservar información mínima por obligaciones legales (ej. requisitos contables o fiscales).</p>
+    </div>
 
-    <p class="muted">
-      Los precios y condiciones vigentes serán los mostrados en Google Play en el momento de la compra/renovación.
-    </p>
-  </section>
+    <div class="doc-section" id="compartimos">
+      <div class="doc-section-title"><span class="section-num">11</span>Con quién compartimos tus datos</div>
+      <ul>
+        <li><strong>Firebase / Google Cloud:</strong> infraestructura de almacenamiento y autenticación (región eur3, Europa)</li>
+        <li><strong>Google Play:</strong> gestión de suscripciones y pagos</li>
+        <li><strong>Google ML Kit (offline):</strong> reconocimiento de voz para Tradúceme (procesado localmente, sin envío a servidores)</li>
+        <li>No vendemos ni cedemos tus datos a terceros con fines comerciales</li>
+        <li>No compartimos datos con terceros sin tu consentimiento explícito</li>
+      </ul>
+    </div>
 
-  <section id="finalidades">
-    <h2>Finalidades y bases legales</h2>
-    <ul>
-      <li><strong>Prestación del servicio</strong> (art. 6.1.b RGPD): crear tu cuenta, registrar/mostrar jornadas, adjuntar soportes y exportar en CSV, PDF, Excel y HTML.</li>
-      <li><strong>Gestión de invitaciones y vínculos</strong> (art. 6.1.b RGPD): permitir invitaciones y el acceso del gestor cuando el conductor acepta.</li>
-      <li><strong>Gestión del acceso a planes</strong> (art. 6.1.b RGPD): verificar el estado de la suscripción y habilitar funciones.</li>
-      <li><strong>Seguridad y mejoras</strong> (art. 6.1.f RGPD): prevenir abusos, soporte y diagnóstico técnico.</li>
-      <li><strong>Cumplimiento legal</strong> (art. 6.1.c RGPD): conservación mínima necesaria ante obligaciones legales.</li>
-    </ul>
-  </section>
+    <div class="doc-section" id="transferencias">
+      <div class="doc-section-title"><span class="section-num">12</span>Transferencias internacionales</div>
+      <p>Los datos se almacenan en la región eur3 (Europa Occidental) de Firebase. Google LLC puede procesar datos en otros países bajo las garantías adecuadas (Cláusulas Contractuales Tipo aprobadas por la Comisión Europea o el Marco de Privacidad UE-EE.UU.).</p>
+    </div>
 
-  <section id="conservacion">
-    <h2>Conservación</h2>
-    <ul>
-      <li>Mantenemos los datos mientras tu cuenta esté activa o hasta que solicites su eliminación.</li>
-      <li>Podemos conservar información mínima necesaria para cumplir obligaciones legales o resolver incidencias.</li>
-      <li>Los registros técnicos de seguridad pueden conservarse durante un periodo razonable para diagnóstico y prevención de abusos.</li>
-    </ul>
-  </section>
+    <div class="doc-section" id="seguridad">
+      <div class="doc-section-title"><span class="section-num">13</span>Seguridad</div>
+      <p>Aplicamos medidas técnicas y organizativas adecuadas: comunicaciones cifradas (HTTPS/TLS), autenticación segura mediante Firebase Auth, reglas de seguridad en Firestore para limitar el acceso a los datos únicamente al usuario propietario (o gestor autorizado), y revisión periódica de las reglas de acceso.</p>
+    </div>
 
-  <section id="compartimos">
-    <h2>Con quién compartimos</h2>
-    <ul>
-      <li><strong>Proveedores de infraestructura</strong> (p. ej., Google Firebase) para alojamiento, autenticación y almacenamiento.</li>
-      <li><strong>Google Play</strong> para la gestión de compras/suscripciones y verificación del estado (cuando aplique).</li>
-      <li><strong>Google ML Kit</strong> para traducción y reconocimiento de voz offline (Tradúceme). El procesamiento se realiza en el dispositivo.</li>
-      <li>Otros proveedores estrictamente necesarios (p. ej., correo para avisos operativos), si se configuran.</li>
-    </ul>
-    <p class="muted">
-      No vendemos tus datos ni los cedemos a terceros para fines publicitarios de terceros.
-    </p>
+    <div class="doc-section" id="derechos">
+      <div class="doc-section-title"><span class="section-num">14</span>Tus derechos</div>
+      <p>Puedes ejercer los siguientes derechos enviando un correo a taxi360barcelona@gmail.com:</p>
+      <div class="rights-grid">
+        <div class="right-card">
+          <div class="right-card-title">❆ Acceso</div>
+          <div class="right-card-text">Conocer qué datos tenemos sobre ti</div>
+        </div>
+        <div class="right-card">
+          <div class="right-card-title">❆ Rectificación</div>
+          <div class="right-card-text">Corregir datos inexactos o incompletos</div>
+        </div>
+        <div class="right-card">
+          <div class="right-card-title">❆ Supresión</div>
+          <div class="right-card-text">Solicitar la eliminación de tus datos</div>
+        </div>
+        <div class="right-card">
+          <div class="right-card-title">❆ Oposición</div>
+          <div class="right-card-text">Oponerte al tratamiento en determinados casos</div>
+        </div>
+        <div class="right-card">
+          <div class="right-card-title">❆ Limitación</div>
+          <div class="right-card-text">Solicitar la limitación del tratamiento</div>
+        </div>
+        <div class="right-card">
+          <div class="right-card-title">❆ Portabilidad</div>
+          <div class="right-card-text">Recibir tus datos en formato estructurado</div>
+        </div>
+      </div>
+      <p>También puedes presentar una reclamación ante la Agencia Española de Protección de Datos (AEPD) en <a href="https://www.aepd.es" style="color:var(--gold);" target="_blank" rel="noopener">www.aepd.es</a>.</p>
+    </div>
 
-    <h3>Fuentes de datos públicas</h3>
-    <p class="muted">
-      Algunas herramientas consultan fuentes de datos públicas para ofrecer información en tiempo real. Estos datos no contienen información personal del usuario:
-    </p>
-    <ul>
-      <li><strong>LlegadasDay!</strong>: APIs oficiales de aeropuertos (BCN y MAD).</li>
-      <li><strong>MisEventos</strong>: Open Data del Ajuntament de Barcelona y datos.madrid.es.</li>
-      <li><strong>MiCiudad</strong>: datos de puntos de interés basados en fuentes oficiales.</li>
-      <li><strong>MiGasolinera</strong>: API del Ministerio de Industria (datos públicos).</li>
-      <li><strong>Trenes / Buses</strong>: datos de llegadas de Renfe.</li>
-      <li><strong>Barcos</strong>: Open Data del Puerto de Barcelona (CKAN API).</li>
-      <li><strong>Tráfico</strong>: Open Data del Ajuntament de Barcelona y datos.madrid.es.</li>
-      <li><strong>MisEventos (clima)</strong>: Open-Meteo API (previsión meteorológica).</li>
-    </ul>
-  </section>
+    <div class="doc-section" id="eliminacion">
+      <div class="doc-section-title"><span class="section-num">15</span>Eliminación de cuenta y datos</div>
+      <p>Puedes eliminar tu cuenta y todos tus datos desde la propia app: <strong>Ajustes → Eliminar cuenta y datos</strong>. Si no puedes acceder a la app, puedes solicitar la eliminación desde <a href="eliminar-cuenta.html" style="color:var(--gold);">esta página</a> o enviando un correo a taxi360barcelona@gmail.com con el correo de tu cuenta y tu UID si lo conoces.</p>
+    </div>
 
-  <section id="transferencias">
-    <h2>Transferencias internacionales</h2>
-    <p>
-      Algunos proveedores pueden operar dentro o fuera del EEE. Cuando corresponda, aplicamos garantías adecuadas
-      conforme a la normativa aplicable (por ejemplo, cláusulas contractuales tipo).
-    </p>
-  </section>
+    <div class="doc-section" id="menores">
+      <div class="doc-section-title"><span class="section-num">16</span>Menores de edad</div>
+      <p>TaxiNeto360 no está dirigida a personas menores de 18 años. No recopilamos conscientemente datos de menores. Si detectamos que un menor ha proporcionado datos sin consentimiento parental, procederemos a eliminar esa información de inmediato.</p>
+    </div>
 
-  <section id="seguridad">
-    <h2>Seguridad</h2>
-    <p>
-      Aplicamos medidas técnicas y organizativas razonables: control de acceso, reglas de seguridad en bases de datos/almacenamiento,
-      cifrado en tránsito y medidas de respaldo. Ninguna medida es infalible; si detectas un incidente, contáctanos.
-    </p>
-  </section>
+    <div class="doc-section" id="cookies">
+      <div class="doc-section-title"><span class="section-num">17</span>Cookies y tecnologías similares</div>
+      <p>La app móvil no utiliza cookies en el sentido tradicional. Podría usar tokens de autenticación de Firebase almacenados localmente para mantener tu sesión activa. Esta web puede usar cookies técnicas estrictamente necesarias para su funcionamiento.</p>
+    </div>
 
-  <section id="derechos" class="card">
-    <h2>Tus derechos</h2>
-    <p>Puedes ejercer acceso, rectificación, supresión, oposición, limitación y portabilidad.</p>
-    <p>
-      Para ejercerlos, escribe a <a href="mailto:taxi360barcelona@gmail.com">taxi360barcelona@gmail.com</a>
-      y/o al correo de privacidad <strong>[privacy@tudominio.com]</strong>.
-    </p>
-    <p class="muted">
-      Si consideras que el tratamiento no se ajusta a la normativa, puedes reclamar ante la Agencia Española de Protección de Datos (AEPD).
-    </p>
-  </section>
+    <div class="doc-section" id="cambios">
+      <div class="doc-section-title"><span class="section-num">18</span>Cambios en esta política</div>
+      <p>Podemos actualizar esta Política periódicamente. Te notificaremos los cambios materiales mediante un aviso en la app o por correo electrónico. La fecha de "Última actualización" al inicio de este documento refleja siempre la versión vigente.</p>
+    </div>
 
-  <section id="borrado" class="card">
-    <h2>Eliminación de cuenta y datos</h2>
-    <p>Puedes eliminar tu cuenta y datos asociados de dos formas:</p>
-    <ol>
-      <li><strong>En la app</strong>: Ajustes → <em>Eliminar cuenta y datos</em>. El borrado es permanente.</li>
-      <li><strong>Desde la web</strong> (si ya no tienes la app):
-        <a href="https://pau111000.github.io/taxineto360-web/eliminar-cuenta.html">https://pau111000.github.io/taxineto360-web/eliminar-cuenta.html</a>.
-      </li>
-    </ol>
-    <p>Podremos conservar la mínima información imprescindible para cumplir obligaciones legales.</p>
-  </section>
+  </main>
+</div>
 
-  <section id="menores">
-    <h2>Menores de edad</h2>
-    <p>
-      El servicio está destinado a personas adultas. No recopilamos de forma consciente datos de <strong>menores de 18 años</strong>.
-      Si detectamos que un menor ha creado una cuenta, eliminaremos los datos y cerraremos la cuenta.
-    </p>
-  </section>
+<footer class="doc-footer">
+  <a href="https://taxi360.app" class="doc-footer-logo">
+    <div class="doc-footer-logo-icon">🚕</div>
+    TaxiNeto360
+  </a>
+  <div class="doc-footer-links">
+    <a href="politica-privacidad-taxineto360.html">Privacidad</a>
+    <a href="terminos.html">Términos</a>
+    <a href="eliminar-cuenta.html">Eliminar cuenta</a>
+    <a href="mailto:taxi360barcelona@gmail.com">Contacto</a>
+  </div>
+  <span style="font-size:12px; color:var(--text-faint);">© 2025 TaxiNeto360</span>
+</footer>
 
-  <section id="cookies">
-    <h2>Cookies y tecnologías similares</h2>
-    <p>
-      TaxiNeto360 es una app móvil; no utiliza cookies de navegador. Los servicios técnicos pueden generar identificadores necesarios
-      para el funcionamiento y seguridad.
-    </p>
-  </section>
-
-  <section id="cambios">
-    <h2>Cambios en esta política</h2>
-    <p>
-      Podremos actualizar esta Política para reflejar cambios legales o funcionales. Publicaremos la versión vigente indicando la fecha de última actualización.
-    </p>
-  </section>
-
-  <section id="mapa-taxi-aviso" class="card">
-    <h2>Aviso legal — Mapa Taxi (alertas de control de velocidad)</h2>
-    <p>
-      La función <strong>Mapa Taxi</strong> muestra en el mapa la ubicación de controles de velocidad
-      fijos y móviles con fines informativos para la conducción profesional. Esta información es
-      <strong>meramente orientativa</strong> y puede no estar actualizada en todo momento.
-      TaxiNeto360 no garantiza la exactitud, completitud ni vigencia de los datos mostrados.
-    </p>
-    <p>
-      El uso de esta función no exime al conductor de respetar la normativa de tráfico vigente ni
-      la señalización oficial. La app <strong>no interfiere con señales de radar</strong> ni actúa
-      como inhibidor o detector electrónico de señales, funciones que están prohibidas por la
-      legislación española (art. 16 Ley sobre Tráfico).
-    </p>
-  </section>
-
-  <section id="contacto">
-    <h2>Contacto</h2>
-    <p>
-      Si tienes dudas sobre esta Política o sobre el tratamiento de tus datos, escríbenos a
-      <a href="mailto:taxi360barcelona@gmail.com">taxi360barcelona@gmail.com</a>.
-    </p>
-    <p class="muted">
-      Responsable: [NOMBRE SOCIAL COMPLETO] • Dirección: [Calle, nº, CP, Barcelona]
-    </p>
-  </section>
-
-  <footer class="meta">
-    © TaxiNeto360 — Documento informativo para usuarios de la app.
-  </footer>
+<script>
+  // Highlight active sidebar link on scroll
+  const sections = document.querySelectorAll('.doc-section');
+  const links = document.querySelectorAll('.sidebar-nav a');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        links.forEach(l => l.classList.remove('active'));
+        const id = entry.target.id;
+        const link = document.querySelector(`.sidebar-nav a[href="#${id}"]`);
+        if (link) link.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-20% 0px -70% 0px' });
+  sections.forEach(s => observer.observe(s));
+</script>
 </body>
 </html>
-
